@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Michael Freeland/Desktop/2018-2019/Spring 2019/300 - Game Production I - Unreal and Unity class/Roll-a-Ball/Roll a Ball/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
