@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 301431720}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1225,6 +1225,7 @@ MonoBehaviour:
   speed: 12
   countText: {fileID: 1386099579}
   winText: {fileID: 297373163}
+  jumpPower: 3
 --- !u!54 &1159612038
 Rigidbody:
   m_ObjectHideFlags: 0

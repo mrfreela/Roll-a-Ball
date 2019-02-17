@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour {
     public float speed;
 	public Text countText;
 	public Text winText;
-
+	public float jumpPower;
+	
+	private bool isGrounded;
 	private Rigidbody rb;
 	private int count;
 
@@ -48,4 +50,19 @@ public class PlayerController : MonoBehaviour {
 			winText.text = "You Win!";
 		}
 	}
+	
+	private void OnCollisionStay(Collision collision) {
+		if (!collision.gameObject.CompareTag("Ground")){
+			return;
+		}
+		isGrounded = true;
+	}
+	
+	private void Update(){
+		if (Input.GetButton("Jump") && isGrounded){
+			rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+			isGrounded = false;
+		}
+	}
+	
 }
