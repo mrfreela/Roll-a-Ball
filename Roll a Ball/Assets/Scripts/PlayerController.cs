@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public Text countText;
 	public Text winText;
 	public float jumpPower;
+	public AudioSource Jump;
 	
 	private bool isGrounded;
 	private Rigidbody rb;
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 	private void Update(){
 		if (Input.GetButton("Jump") && isGrounded){
 			rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+			Jump.Play();
 			isGrounded = false;
 		}
 	}
